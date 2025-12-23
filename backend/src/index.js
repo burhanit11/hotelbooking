@@ -1,0 +1,1 @@
+console.log("Hostel booking server is Running..")
