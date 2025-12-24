@@ -1,5 +1,5 @@
 import bgImg from "../assets/images/images.jpg";
-import AppointmentFrom from "./From";
+import AppointmentFrom from "../components/AppointmentForm";
 
 export default function MakeAppointment() {
   return (
