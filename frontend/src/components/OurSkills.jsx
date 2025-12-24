@@ -1,4 +1,4 @@
-import bgImg from "../assets/images/images.jpg";
+import hotel2 from "../assets/images/hotel2.PNG";
 import ProgressBar from "./ProgressBar";
 
 export default function OurSkills() {
@@ -10,7 +10,7 @@ export default function OurSkills() {
   ];
 
   return (
-    <div className="bg-gray-100 py-16 px-4 md:px-8">
+    <div className="bg-white py-16 px-4 md:px-8">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-7xl mx-auto">
         {/* LEFT CONTENT */}
         <div>
@@ -38,18 +38,11 @@ export default function OurSkills() {
         </div>
 
         {/* RIGHT IMAGE SECTION */}
-        <div className="relative h-[350px] md:h-[450px] rounded-lg overflow-hidden">
+        <div className=" h-[350px] md:h-[450px] rounded-lg overflow-hidden">
           <img
-            src={bgImg}
+            src={hotel2}
             alt="background"
             className="w-full h-full object-cover rounded-lg"
-          />
-
-          {/* FLOATING IMAGE */}
-          <img
-            src={bgImg}
-            alt="overlay"
-            className="absolute bottom-6 left-6 w-32 h-32 md:w-44 md:h-44 object-cover rounded-lg shadow-lg"
           />
         </div>
       </div>

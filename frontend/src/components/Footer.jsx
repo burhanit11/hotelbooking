@@ -1,31 +1,11 @@
-import React, { useState } from "react";
 import {
   AiFillFacebook,
   AiFillInstagram,
   AiFillYoutube,
   AiOutlineTwitter,
 } from "react-icons/ai";
-import { toast } from "react-toastify";
 
 const Footer = () => {
-  const [email, setEmail] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-
-  const sendMail = async () => {
-    try {
-      setIsLoading(true);
-      const res = await axios.post(`${server}/subscribe-email`, {
-        email,
-      });
-      toast.success(res?.data?.message);
-      setEmail("");
-      setIsLoading(false);
-    } catch (error) {
-      toast.error(error?.response?.data?.message || "failed");
-      setIsLoading(false);
-    }
-  };
-
   return (
     <div className="bg-[#000] text-white">
       <div className="md:flex md:justify-between md:items-center sm:px-12   items-center  text-center  px-5 text-gray-400 text-sm   py-5">

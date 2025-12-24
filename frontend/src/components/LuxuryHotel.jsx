@@ -1,8 +1,7 @@
-import bgImg from "../assets/images/images.jpg";
+import hotel from "../assets/images/hotel.PNG";
 import { MdBikeScooter } from "react-icons/md";
 import { FaSwimmer } from "react-icons/fa";
 import correctImg from "../assets/images/correctImg.PNG";
-import { IoRestaurantSharp } from "react-icons/io5";
 import { HiMiniArrowUpRight } from "react-icons/hi2";
 
 export default function LuxuryHotel() {
@@ -58,21 +57,12 @@ export default function LuxuryHotel() {
         </div>
 
         {/* RIGHT IMAGE SECTION */}
-        <div className="relative h-[400px] md:h-[500px] rounded-lg overflow-hidden">
+        <div className=" h-[400px] md:h-[500px] rounded-lg overflow-hidden">
           <img
-            src={bgImg}
+            src={hotel}
             alt="hotel"
             className="w-full h-full object-cover rounded-lg"
           />
-
-          {/* RESTAURANT CARD */}
-          <div className="absolute bottom-6 right-6 bg-black w-40 h-40 rounded-lg text-center p-4">
-            <IoRestaurantSharp size={40} className="text-white mx-auto mt-2" />
-            <h3 className="text-white font-bold mt-2">Restaurants</h3>
-            <p className="text-white text-sm mt-1">
-              Lorem ipsum dolor sit amet.
-            </p>
-          </div>
         </div>
       </div>
     </div>

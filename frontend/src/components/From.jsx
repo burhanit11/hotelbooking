@@ -3,6 +3,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { server } from "../server";
 
 const validationSchema = Yup.object({
   firstName: Yup.string().required("First Name is required"),
@@ -39,10 +40,7 @@ const AppointmentForm = () => {
       onSubmit: async (values, { resetForm }) => {
         try {
           setIsLoading(true);
-          const res = await axios.post(
-            "http://localhost:5000/api/v1/booking",
-            values
-          );
+          const res = await axios.post(`${server}/booking`, values);
           toast.success("Booking created successfully!");
           resetForm();
           setIsLoading(false);
