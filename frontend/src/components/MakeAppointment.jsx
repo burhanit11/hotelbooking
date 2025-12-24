@@ -39,7 +39,7 @@ export default function MakeAppointment() {
               <p className="text-sm">24/7 Service Available</p>
             </div>
 
-            <button className="mt-5 bg-yellow-500 text-black font-semibold px-4 py-3 rounded">
+            <button className=" mt-5 bg-yellow-500 text-black font-semibold px-4 py-3 rounded">
               Book Your Stay
             </button>
           </div>

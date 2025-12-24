@@ -3,6 +3,7 @@ import { MdBikeScooter } from "react-icons/md";
 import { FaSwimmer } from "react-icons/fa";
 import correctImg from "../assets/images/correctImg.PNG";
 import { IoRestaurantSharp } from "react-icons/io5";
+import { HiMiniArrowUpRight } from "react-icons/hi2";
 
 export default function LuxuryHotel() {
   return (
@@ -45,14 +46,14 @@ export default function LuxuryHotel() {
           <ul className="space-y-3">
             {[1, 2, 3].map((item) => (
               <li key={item} className="flex items-center gap-2">
-                <img src={correctImg} alt="check" className="w-5 h-5" />
+                <img src={correctImg} alt="check" className="w-5 h-5 " />
                 Lorem ipsum dolor sit amet consectetur adipisicing.
               </li>
             ))}
           </ul>
 
-          <button className="mt-6 bg-primary text-white font-semibold px-6 py-3 rounded">
-            Book Your Stay
+          <button className="flex items-center gap-2 mt-6 bg-primary text-white font-semibold px-6 py-3 rounded">
+            Discover More <HiMiniArrowUpRight />
           </button>
         </div>
 

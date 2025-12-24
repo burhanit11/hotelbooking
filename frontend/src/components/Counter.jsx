@@ -1,30 +1,25 @@
-
-
 export default function Counter() {
   return (
-    <>
-     <div
-        class="flex sm:flex-row flex-col justify-between bg-primary md:px-20 px-5 hero1 py-5"
-      > 
-        <div class="flex flex-col justify-center items-center text-white">
-          <span>350+</span>
-          <span class="text-md">Luxury Rooms</span>
-        </div>
-        <div class="flex flex-col justify-center items-center text-white">
-            <span>650+</span>
-          <span class="text-md">Regular Guests</span>
-        </div>
-        <div class="flex flex-col justify-center items-center text-white">
-             <span>80+</span>
-          <span class="text-md">Team Member</span>
-        </div>
-        <div class="flex flex-col justify-center items-center text-white">
-         <span>75+</span>
-          <span class="text-md"
-            >Beachs</span>
-        </div>
+    <div className="flex sm:flex-row flex-col justify-between bg-primary md:px-20 px-5 py-5">
+      <div className="flex flex-col justify-center items-center text-white">
+        <span className="text-3xl font-bold">350+</span>
+        <span className="text-md">Luxury Rooms</span>
       </div>
 
-    </>
+      <div className="flex flex-col justify-center items-center text-white">
+        <span className="text-3xl font-bold">650+</span>
+        <span className="text-md">Regular Guests</span>
+      </div>
+
+      <div className="flex flex-col justify-center items-center text-white">
+        <span className="text-3xl font-bold">80+</span>
+        <span className="text-md">Team Members</span>
+      </div>
+
+      <div className="flex flex-col justify-center items-center text-white">
+        <span className="text-3xl font-bold">75+</span>
+        <span className="text-md">Beaches</span>
+      </div>
+    </div>
   );
 }

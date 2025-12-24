@@ -1,6 +1,7 @@
 import bgImg from "../assets/images/images.jpg";
 import { MdGroups2 } from "react-icons/md";
 import { FaBed, FaBath } from "react-icons/fa6";
+import { HiMiniArrowUpRight } from "react-icons/hi2";
 
 export default function LuxuryRooms() {
   return (
@@ -43,9 +44,11 @@ export default function LuxuryRooms() {
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Blanditiis labore officia enim.
               </p>
-
-              <button className="bg-primary text-white font-semibold px-4 py-2 rounded">
-                Book Your Stay
+              <span className="absolute top-3 right-3 bg-primary text-white w-7 h-7 flex items-center justify-center rounded">
+                +
+              </span>
+              <button className="flex items-center gap-2 bg-primary text-white font-medium px-4 py-2 rounded">
+                Read More <HiMiniArrowUpRight />
               </button>
             </div>
           </div>

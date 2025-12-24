@@ -23,7 +23,7 @@ export default function OurClents() {
               <img
                 src={client}
                 alt="client"
-                className="max-h-12 object-contain"
+                className="max-h-20 object-contain"
               />
             </div>
           )

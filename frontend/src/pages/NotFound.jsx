@@ -1,5 +1,6 @@
 import bgImg from "../assets/images/images.jpg";
 import img404 from "../assets/images/404page.PNG";
+import { HiMiniArrowUpRight } from "react-icons/hi2";
 
 export default function NotFound() {
   return (
@@ -27,8 +28,8 @@ export default function NotFound() {
         </p>
 
         <div className="mx-auto w-40">
-          <button className=" text-white font-semibold bg-primary rounded p-3 ">
-            Book Your Stay
+          <button className="flex items-center gap-2 text-white font-semibold bg-primary rounded p-3 ">
+            Book Your Stay <HiMiniArrowUpRight />
           </button>
         </div>
       </div>
