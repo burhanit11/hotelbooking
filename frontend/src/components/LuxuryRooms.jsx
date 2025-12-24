@@ -44,9 +44,7 @@ export default function LuxuryRooms() {
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Blanditiis labore officia enim.
               </p>
-              <span className="absolute top-3 right-3 bg-primary text-white w-7 h-7 flex items-center justify-center rounded">
-                +
-              </span>
+
               <button className="flex items-center gap-2 bg-primary text-white font-medium px-4 py-2 rounded">
                 Read More <HiMiniArrowUpRight />
               </button>
