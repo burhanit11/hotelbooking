@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from "react";
 import { FaSearch, FaBars, FaTimes } from "react-icons/fa";
 import { HiMiniArrowUpRight } from "react-icons/hi2";

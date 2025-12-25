@@ -9,7 +9,7 @@ export default function LuxuryHotel() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-7xl mx-auto">
         {/* LEFT CONTENT */}
         <div>
-          <p className="text-primary w-fit px-4 py-1 text-sm bg-white rounded">
+          <p className="text-primary w-fit px-4 py-1 text-sm font-semibold bg-white rounded">
             LUXURY HOTEL
           </p>
 

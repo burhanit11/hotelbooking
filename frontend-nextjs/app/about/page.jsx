@@ -1,4 +1,5 @@
 import Counter from "@/components/Counter";
+import Experince from "@/components/Experince";
 import LuxuryHotel from "@/components/LuxuryHotel";
 import OurClents from "@/components/OurClents";
 import OurSkills from "@/components/OurSkills";
@@ -20,8 +21,8 @@ export default function About() {
       </div>
       <LuxuryHotel />
       <Counter />
-
       <OurSkills />
+      <Experince />
       <OurStaff />
       <OurClents />
     </>

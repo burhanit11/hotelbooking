@@ -25,7 +25,7 @@ export default function OurStaff() {
 
   return (
     <div className="bg-gray-100 py-16 px-4 md:px-8">
-      <p className="text-primary mx-auto w-fit px-4 py-1 text-sm bg-secondary rounded">
+      <p className="text-primary mx-auto w-fit px-4 py-1 text-sm font-semibold bg-secondary rounded">
         FLXYLAND STAFF
       </p>
 

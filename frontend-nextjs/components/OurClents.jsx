@@ -12,7 +12,7 @@ export default function OurClents() {
 
   return (
     <div className="bg-secondary py-16 px-4">
-      <p className="text-primary mx-auto w-fit px-4 py-1 text-sm bg-white rounded">
+      <p className="text-primary mx-auto w-fit px-4 py-1 text-sm font-semibold bg-white rounded">
         STAY WITH US
       </p>
 

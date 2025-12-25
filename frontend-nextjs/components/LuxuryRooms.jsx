@@ -7,7 +7,7 @@ export default function LuxuryRooms() {
   return (
     <div className="bg-primary py-12 px-4 md:px-8">
       {/* Section Title */}
-      <p className="text-primary mx-auto w-fit px-4 py-1 text-center text-sm bg-white rounded">
+      <p className="text-primary mx-auto w-fit px-4 py-1 text-center font-semibold text-sm bg-white rounded">
         STAY WITH US
       </p>
 
