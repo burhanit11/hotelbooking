@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
@@ -41,7 +42,7 @@ const AppointmentForm = () => {
       onSubmit: async (values, { resetForm }) => {
         try {
           setIsLoading(true);
-          const res = await axios.post(`${server}/booking`, values);
+          await axios.post(`${server}/booking`, values);
           toast.success("Booking created successfully!");
           resetForm();
           setIsLoading(false);
@@ -53,148 +54,159 @@ const AppointmentForm = () => {
     });
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
-      <div className="flex gap-4">
-        <div className="flex-1">
-          <label>First Name</label>
-          <input
-            name="firstName"
-            value={values.firstName}
-            onChange={handleChange}
-            onBlur={handleBlur}
-            className="w-full border border-primary focus:outline-primary  px-2 py-1 rounded bg-secondary"
-          />
-          {touched.firstName && errors.firstName && (
-            <p className="text-red-500">{errors.firstName}</p>
-          )}
+    <>
+      <h1 className="text-2xl font-semibold mb-6 text-center">
+        Book Your Stay
+      </h1>
+      <form onSubmit={handleSubmit} className="space-y-4">
+        {/* First Name & Last Name */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label>First Name</label>
+            <input
+              name="firstName"
+              value={values.firstName}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              className="w-full border border-primary px-3 py-2 rounded bg-gray-50 focus:outline-primary"
+            />
+            {touched.firstName && errors.firstName && (
+              <p className="text-red-500 text-sm">{errors.firstName}</p>
+            )}
+          </div>
+          <div>
+            <label>Last Name</label>
+            <input
+              name="lastName"
+              value={values.lastName}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              className="w-full border border-primary px-3 py-2 rounded bg-gray-50 focus:outline-primary"
+            />
+            {touched.lastName && errors.lastName && (
+              <p className="text-red-500 text-sm">{errors.lastName}</p>
+            )}
+          </div>
         </div>
-        <div className="flex-1">
-          <label>Last Name</label>
-          <input
-            name="lastName"
-            value={values.lastName}
-            onChange={handleChange}
-            onBlur={handleBlur}
-            className="w-full border border-primary focus:outline-primary px-2 py-1 rounded bg-secondary"
-          />
-          {touched.lastName && errors.lastName && (
-            <p className="text-red-500">{errors.lastName}</p>
-          )}
-        </div>
-      </div>
 
-      <div className="flex gap-4">
-        <div className="flex-1">
-          <label>Email</label>
-          <input
-            name="email"
-            type="email"
-            value={values.email}
-            onChange={handleChange}
-            onBlur={handleBlur}
-            className="w-full border border-primary focus:outline-primary px-2 py-1 rounded bg-secondary"
-          />
-          {touched.email && errors.email && (
-            <p className="text-red-500">{errors.email}</p>
-          )}
+        {/* Email & Phone */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label>Email</label>
+            <input
+              type="email"
+              name="email"
+              value={values.email}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              className="w-full border border-primary px-3 py-2 rounded bg-gray-50 focus:outline-primary"
+            />
+            {touched.email && errors.email && (
+              <p className="text-red-500 text-sm">{errors.email}</p>
+            )}
+          </div>
+          <div>
+            <label>Phone Number</label>
+            <input
+              name="phoneNumber"
+              value={values.phoneNumber}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              className="w-full border border-primary px-3 py-2 rounded bg-gray-50 focus:outline-primary"
+            />
+            {touched.phoneNumber && errors.phoneNumber && (
+              <p className="text-red-500 text-sm">{errors.phoneNumber}</p>
+            )}
+          </div>
         </div>
-        <div className="flex-1">
-          <label>Phone Number</label>
-          <input
-            name="phoneNumber"
-            value={values.phoneNumber}
-            onChange={handleChange}
-            onBlur={handleBlur}
-            className="w-full border border-primary focus:outline-primary px-2 py-1 rounded bg-secondary"
-          />
-          {touched.phoneNumber && errors.phoneNumber && (
-            <p className="text-red-500">{errors.phoneNumber}</p>
-          )}
-        </div>
-      </div>
 
-      <div className="flex gap-4">
-        <div className="flex-1">
-          <label>Select Type</label>
-          <input
-            name="selectType"
-            value={values.selectType}
-            onChange={handleChange}
-            onBlur={handleBlur}
-            className="w-full border border-primary focus:outline-primary px-2 py-1 rounded bg-secondary "
-          />
-          {touched.selectType && errors.selectType && (
-            <p className="text-red-500">{errors.selectType}</p>
-          )}
+        {/* Type & Room */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label>Select Type</label>
+            <input
+              name="selectType"
+              value={values.selectType}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              className="w-full border border-primary px-3 py-2 rounded bg-gray-50 focus:outline-primary"
+            />
+            {touched.selectType && errors.selectType && (
+              <p className="text-red-500 text-sm">{errors.selectType}</p>
+            )}
+          </div>
+          <div>
+            <label>Select Room</label>
+            <input
+              name="selectRoom"
+              value={values.selectRoom}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              className="w-full border border-primary px-3 py-2 rounded bg-gray-50 focus:outline-primary"
+            />
+            {touched.selectRoom && errors.selectRoom && (
+              <p className="text-red-500 text-sm">{errors.selectRoom}</p>
+            )}
+          </div>
         </div>
-        <div className="flex-1">
-          <label>Select Room</label>
-          <input
-            name="selectRoom"
-            value={values.selectRoom}
-            onChange={handleChange}
-            onBlur={handleBlur}
-            className="w-full border border-primary focus:outline-primary px-2 py-1 rounded bg-secondary"
-          />
-          {touched.selectRoom && errors.selectRoom && (
-            <p className="text-red-500">{errors.selectRoom}</p>
-          )}
-        </div>
-      </div>
 
-      <div className="flex gap-4">
-        <div className="flex-1">
-          <label>Check In</label>
-          <input
-            name="checkIn"
-            type="date"
-            value={values.checkIn}
+        {/* Check In & Check Out */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label>Check In</label>
+            <input
+              type="date"
+              name="checkIn"
+              value={values.checkIn}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              className="w-full border border-primary px-3 py-2 rounded bg-gray-50 focus:outline-primary"
+            />
+            {touched.checkIn && errors.checkIn && (
+              <p className="text-red-500 text-sm">{errors.checkIn}</p>
+            )}
+          </div>
+          <div>
+            <label>Check Out</label>
+            <input
+              type="date"
+              name="checkOut"
+              value={values.checkOut}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              className="w-full border border-primary px-3 py-2 rounded bg-gray-50 focus:outline-primary"
+            />
+            {touched.checkOut && errors.checkOut && (
+              <p className="text-red-500 text-sm">{errors.checkOut}</p>
+            )}
+          </div>
+        </div>
+
+        {/* Message */}
+        <div>
+          <label>Message</label>
+          <textarea
+            name="message"
+            rows={4}
+            value={values.message}
             onChange={handleChange}
             onBlur={handleBlur}
-            className="w-full border border-primary focus:outline-primary px-2 py-1 rounded bg-secondary"
+            className="w-full border border-primary px-3 py-2 rounded bg-gray-50 focus:outline-primary"
           />
-          {touched.checkIn && errors.checkIn && (
-            <p className="text-red-500">{errors.checkIn}</p>
-          )}
         </div>
-        <div className="flex-1">
-          <label>Check Out</label>
-          <input
-            name="checkOut"
-            type="date"
-            value={values.checkOut}
-            onChange={handleChange}
-            onBlur={handleBlur}
-            className="w-full border border-primary focus:outline-primary px-2 py-1 rounded bg-secondary"
-          />
-          {touched.checkOut && errors.checkOut && (
-            <p className="text-red-500">{errors.checkOut}</p>
-          )}
+
+        {/* Submit Button */}
+        <div>
+          <button
+            type="submit"
+            disabled={isLoading}
+            className="w-full md:w-auto bg-primary text-white px-6 py-2 rounded hover:opacity-90 transition"
+          >
+            {isLoading ? "Sending..." : "Book Appointment"}
+          </button>
         </div>
-      </div>
-
-      <div>
-        <label>Message</label>
-        <textarea
-          name="message"
-          value={values.message}
-          onChange={handleChange}
-          onBlur={handleBlur}
-          className="w-full border border-primary focus:outline-primary px-2 py-1 rounded bg-secondary"
-        />
-        {touched.message && errors.message && (
-          <p className="text-red-500">{errors.message}</p>
-        )}
-      </div>
-
-      <button
-        type="submit"
-        className="bg-primary text-white px-4 py-2 rounded"
-        disabled={isLoading}
-      >
-        {isLoading ? "Sending..." : "Book Appointment"}
-      </button>
-    </form>
+      </form>
+    </>
   );
 };
 
