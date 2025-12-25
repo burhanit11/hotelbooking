@@ -11,10 +11,11 @@ export default function Experince() {
         Resort
       </h1>
 
-      <video controls className="rounded-lg   mx-auto mt-8">
-        <source src="/public/hotelvideo.mp4" type="video/mp4" />
-        {/* Your browser does not support the video tag. */}
-      </video>
+      <div className="w-full max-w-2xl mx-auto mt-8 aspect-video">
+        <video controls className="w-full h-full rounded-lg object-cover">
+          <source src="/hotelvideo.mp4" type="video/mp4" />
+        </video>
+      </div>
     </div>
   );
 }
