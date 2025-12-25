@@ -1,4 +1,4 @@
-import TestCrash from "@/components/TestCrash";
+// import TestCrash from "@/components/TestCrash";
 
 export default function Home() {
   return (
@@ -14,7 +14,7 @@ export default function Home() {
           Home &gt; Page
         </h4>
       </div>
-      <TestCrash />
+      {/* <TestCrash /> */}
     </>
   );
 }
