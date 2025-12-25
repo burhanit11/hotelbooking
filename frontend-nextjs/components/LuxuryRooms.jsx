@@ -60,7 +60,7 @@ export default function LuxuryRooms() {
               </p>
 
               {/* Read More Button */}
-              <button className="flex items-center gap-2 bg-primary text-white font-medium px-4 py-2 rounded hover:bg-blue-700 transition">
+              <button className="flex items-center gap-2 bg-primary text-white font-medium px-4 py-2 rounded  transition">
                 Read More <HiMiniArrowUpRight />
               </button>
             </div>

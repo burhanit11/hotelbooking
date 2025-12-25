@@ -1,5 +1,6 @@
 import { HiMiniArrowUpRight } from "react-icons/hi2";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function NotFound() {
   return (
@@ -33,9 +34,11 @@ export default function NotFound() {
         </p>
 
         <div className="mx-auto w-40">
-          <button className="flex items-center gap-2 text-white font-semibold bg-primary rounded p-3 ">
-            Book Your Stay <HiMiniArrowUpRight />
-          </button>
+          <Link href={"/booking"}>
+            <button className="flex items-center gap-2 text-white font-semibold bg-primary rounded p-3 ">
+              Book Your Stay <HiMiniArrowUpRight />
+            </button>
+          </Link>
         </div>
       </div>
     </>
