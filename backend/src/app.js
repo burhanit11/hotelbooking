@@ -24,4 +24,8 @@ app.use("/api/v1/staff", staffRoutes);
 app.use("/api/v1/hotel", hotelRoutes);
 app.use("/api/v1/booking", bookingRoutes);
 
+app.get("/", (req, res) => {
+  res.send("Backend is live! 🎉");
+});
+
 export { app };
